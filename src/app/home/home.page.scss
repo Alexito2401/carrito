@@ -7,22 +7,53 @@
   display: flex;
   justify-content: center;
   flex-wrap:wrap;
-  width: 50vw;
-}
-
-.izquierda {
-  width: 30%;
+  width: 80vw;
 }
 
 .c-card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   width: 50%;
   margin: 40px;
-  max-width: 350px;
-  min-width: 250px;
+  max-width: 300px;
+  min-width: 275px;
   padding: 5px;
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  display: block !important;
+}
+
+.c-divlista{
+  position: fixed;
+  top: 50px;
+  right: 0px;
+}
+
+.c-lista{
+  display: block;
+  width: 33vw;
+  float: right;
+}
+
+.c-texto{
+  text-align: right;
 }
 
 ion-img{
   width: 200px;
   height: 200px;
+}
+
+ion-icon{
+  color: white;
+}
+
+.c-trash-button {
+ border: 1px solid white;
+ border-radius: 2px;
+ padding-top: 3px;
+ padding-bottom: 3px;
 }

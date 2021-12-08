@@ -1,14 +1,19 @@
 <ion-app>
   <ion-header [translucent]="true">
     <ion-toolbar>
-      <ion-title> Blank </ion-title>
+      <ion-buttons slot="secondary">
+        <ion-button (click)="changeVisible()">
+          <ion-icon slot="icon-only" [name]="icono_carrito ? 'cart' : 'cart-outline'"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title> Tienda Informatica </ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content [fullscreen]="true">
     <ion-header collapse="condense">
       <ion-toolbar>
-        <ion-title size="large">Blank</ion-title>
+        <ion-title size="large">Tienda Informatica</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -25,11 +30,40 @@
             <br />
             <ion-label> Informacion del producto: {{item.marca}} </ion-label>
             <ion-img [src]="item.link"></ion-img>
-            <ion-button class="boton" size="10">Comprar</ion-button>
           </ion-card-content>
+          <ion-button
+          (click)="carrito.agregarCarrito(item)"
+          (click)="changeIcon()"
+            class="center"
+          >
+            Comprar
+          </ion-button>
         </ion-card>
       </div>
-      <div class="derecha"></div>
+    </div>
+    <div class="c-divlista" *ngIf="visible == false">
+      <ion-list class="c-lista">
+        <ion-item class="c-texto" *ngFor="let item of carrito.productos">
+          <ion-label style="margin-right: 10px;">{{item.nombre}} - Cantidad x{{item.cantidad}}</ion-label>
+          <ion-button
+          (click)="carrito.borrarProducto(item.id)"
+          (click)="changeIcon()"
+            class="c-trash-button"
+            fill="clear"
+          >
+            <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+          </ion-button>
+
+          <ion-button
+          (click)="carrito.borrarTotal(item.id)"
+          (click)="changeIcon()"
+            class="c-trash-button"
+            fill="clear"
+          >
+            <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
     </div>
   </ion-content>
 </ion-app>
