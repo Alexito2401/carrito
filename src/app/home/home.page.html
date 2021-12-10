@@ -2,13 +2,31 @@
   <ion-header [translucent]="true">
     <ion-toolbar>
       <ion-buttons slot="secondary">
-        <ion-button (click)="changeVisible()">
+        <ion-button menuToggle="right" (click)="changeVisible()">
           <ion-icon slot="icon-only" [name]="icono_carrito ? 'cart' : 'cart-outline'"></ion-icon>
         </ion-button>
       </ion-buttons>
       <ion-title> Tienda Informatica </ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
 
   <ion-content [fullscreen]="true">
     <ion-header collapse="condense">
@@ -31,35 +49,22 @@
             <ion-label> Informacion del producto: {{item.marca}} </ion-label>
             <ion-img [src]="item.link"></ion-img>
           </ion-card-content>
-          <ion-button
-          (click)="carrito.agregarCarrito(item)"
-          (click)="changeIcon()"
-            class="center"
-          >
+          <ion-button (click)="carrito.agregarCarrito(item)" (click)="changeIcon()" class="center">
             Comprar
           </ion-button>
         </ion-card>
       </div>
     </div>
-    <div class="c-divlista" *ngIf="visible == false">
+    <div class="c-divlista" *ngIf="!visible">
       <ion-list class="c-lista">
         <ion-item class="c-texto" *ngFor="let item of carrito.productos">
           <ion-label style="margin-right: 10px;">{{item.nombre}} - Cantidad x{{item.cantidad}}</ion-label>
-          <ion-button
-          (click)="carrito.borrarProducto(item.id)"
-          (click)="changeIcon()"
-            class="c-trash-button"
-            fill="clear"
-          >
+          <ion-button (click)="carrito.borrarProducto(item.id)" (click)="changeIcon()" class="c-trash-button"
+            fill="clear">
             <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
           </ion-button>
 
-          <ion-button
-          (click)="carrito.borrarTotal(item.id)"
-          (click)="changeIcon()"
-            class="c-trash-button"
-            fill="clear"
-          >
+          <ion-button (click)="carrito.borrarTotal(item.id)" (click)="changeIcon()" class="c-trash-button" fill="clear">
             <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
           </ion-button>
         </ion-item>
