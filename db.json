@@ -1,0 +1,210 @@
+{
+    "Ordenadores": [
+        {
+            "id": 1,
+            "nombre": "Acer Predator Orion 3000",
+            "precio": "1499,00",
+            "marca": "Samsung",
+            "imagen": "../../assets/imgs/productos/ordenador.png",
+            "icono": "desktop-outline",
+            "categoria": 1
+        },
+        {
+            "id": 2,
+            "nombre": "MSI MAG Codex 5",
+            "precio": "1499,00",
+            "marca": "MSI",
+            "imagen": "../../assets/imgs/productos/ordenador2.png",
+            "icono": "desktop-outline",
+            "categoria": 1
+        },
+        {
+            "id": 3,
+            "nombre": "PcCom Silver Pro",
+            "precio": "1514,00",
+            "marca": "PcCom",
+            "imagen": "../../assets/imgs/productos/ordenador3.png",
+            "icono": "desktop-outline",
+            "categoria": 1
+        },
+        {
+            "id": 4,
+            "nombre": "PcCom Gold Snow Edition",
+            "precio": "2070,00",
+            "marca": "PcCom",
+            "imagen": "../../assets/imgs/productos/ordenador4.png",
+            "icono": "desktop-outline",
+            "categoria": 1
+        }
+    ],
+    "Portatiles": [
+        {
+            "id": 5,
+            "nombre": "Asus VivoBook Pro 15",
+            "precio": "409,00",
+            "marca": "Asus",
+            "imagen": "../../assets/imgs/productos/portatil.png",
+            "icono": "laptop-outline",
+            "categoria": 2
+        },
+        {
+            "id": 6,
+            "nombre": "Alurin Go Intel Pentium",
+            "precio": "949,00",
+            "marca": "Alurin",
+            "imagen": "../../assets/imgs/productos/portatil2.png",
+            "icono": "laptop-outline",
+            "categoria": 2
+        },
+        {
+            "id": 7,
+            "nombre": "Lenovo IdeaPad 3",
+            "precio": "329,00",
+            "marca": "Leonovo",
+            "imagen": "../../assets/imgs/productos/portatil3.png",
+            "icono": "laptop-outline",
+            "categoria": 2
+        },
+        {
+            "id": 8,
+            "nombre": "HP 255 G8 AMD",
+            "precio": "409,00",
+            "marca": "HP",
+            "imagen": "../../assets/imgs/productos/portatil4.png",
+            "icono": "laptop-outline",
+            "categoria": 2
+        }
+    ],
+    "Perifericos": [
+        {
+            "id": 9,
+            "nombre": "MSI Optix G271 27'",
+            "precio": "199,00",
+            "marca": "MSI",
+            "imagen": "../../assets/imgs/productos/periferico.png",
+            "categoria": 3
+        },
+        {
+            "id": 10,
+            "nombre": "HyperX Quadcast S",
+            "precio": "198,00",
+            "marca": "HyperX",
+            "imagen": "../../assets/imgs/productos/periferico2.png",
+            "categoria": 3
+        },
+        {
+            "id": 11,
+            "nombre": "Wacom Cintiq 16",
+            "precio": "590,00",
+            "marca": "Wacom",
+            "imagen": "../../assets/imgs/productos/periferico3.png",
+            "categoria": 3
+        },
+        {
+            "id": 12,
+            "nombre": "Logitech perifericos",
+            "precio": "49,99",
+            "marca": "Logitech",
+            "imagen": "../../assets/imgs/productos/periferico4.png",
+            "categoria": 3
+        }
+    ],
+    "Impresoras": [
+        {
+            "id": 13,
+            "nombre": "HP Officejet Pro 6230",
+            "precio": "83,87",
+            "marca": "HP",
+            "imagen": "../../assets/imgs/productos/impresora.png",
+            "icono": "print-outline",
+            "categoria": 4
+        },
+        {
+            "id": 14,
+            "nombre": "Epson Workforce WF-2010W",
+            "precio": "86,98",
+            "marca": "Epson",
+            "imagen": "../../assets/imgs/productos/impresora2.png",
+            "icono": "print-outline",
+            "categoria": 4
+        },
+        {
+            "id": 15,
+            "nombre": "HP Officejet 200",
+            "precio": "252,83",
+            "marca": "HP",
+            "imagen": "../../assets/imgs/productos/impresora3.png",
+            "icono": "print-outline",
+            "categoria": 4
+        },
+        {
+            "id": 16,
+            "nombre": "Zebra GK420d",
+            "precio": "439,70",
+            "marca": "Zebra",
+            "imagen": "../../assets/imgs/productos/impresora4.png",
+            "icono": "print-outline",
+            "categoria": 4
+        }
+    ],
+    "Televisores": [
+        {
+            "id": 17,
+            "nombre": "Xiaomi Mi TV P1 43",
+            "precio": "399,00",
+            "marca": "Xiaomi",
+            "imagen": "../../assets/imgs/productos/tele.png",
+            "icono": "tv-outline",
+            "categoria": 5
+        },
+        {
+            "id": 18,
+            "nombre": "Samsung UE55AU7172 55",
+            "precio": "489,00",
+            "marca": "Samsung",
+            "imagen": "../../assets/imgs/productos/tele2.png",
+            "icono": "tv-outline",
+            "categoria": 5
+        },
+        {
+            "id": 19,
+            "nombre": "Toshiba 32LA2063DG 32",
+            "precio": "199,99",
+            "marca": "Toshiba",
+            "imagen": "../../assets/imgs/productos/tele3.png",
+            "icono": "tv-outline",
+            "categoria": 5
+        },
+        {
+            "id": 20,
+            "nombre": "TD Systems K55DLG12US 55",
+            "precio": "398,50",
+            "marca": "Td Systems",
+            "imagen": "../../assets/imgs/productos/tele4.png",
+            "icono": "tv-outline",
+            "categoria": 5
+        }
+    ],
+    "categorias": [
+        {
+            "id": 1,
+            "nombre": "Ordenadores"
+        },
+        {
+            "id": 2,
+            "nombre": "Portatiles"
+        },
+        {
+            "id": 3,
+            "nombre": "Perifericos"
+        },
+        {
+            "id": 4,
+            "nombre": "Impresoras"
+        },
+        {
+            "id": 5,
+            "nombre": "Televisores"
+        }
+    ]
+}

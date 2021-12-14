@@ -4,6 +4,7 @@ export class Producto {
   public precio: string;
   public marca: string;
   public link: string;
+  public icono: string;
   public idCategoria: number;
   public cantidad: number;
 
@@ -13,6 +14,7 @@ export class Producto {
     precio: string,
     marca: string,
     link: string = '',
+    icono: string,
     categoria: number
   ) {
     this.id = id;
@@ -21,6 +23,7 @@ export class Producto {
     this.marca = marca;
     this.link = link;
     this.idCategoria = categoria;
+    this.icono = icono
     this.cantidad = 1;
   }
 }
@@ -93,6 +96,11 @@ export class ConstantsService {
     this._Carrito.agregarCarrito(producto);
     console.log(this._Carrito);
   }
+
+  public getCantidadProducto(producto: Producto){
+
+  }
+
   public borrarUno(producto: Producto) {
     this._Carrito.borrarProducto(producto.id);
   }

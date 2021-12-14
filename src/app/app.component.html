@@ -1,27 +1,30 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+  <ion-split-pane when="false" contentId="main-content">
+    <ion-menu side="end" contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+          <ion-list-header>Carrito</ion-list-header>
+          <ion-note class="ion-margin">hi@ionicframework.com</ion-note>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
-              routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of carrito; let i = index">
+            <ion-item routerDirection="root" lines="none" detail="false" routerLinkActive="selected">
+              <ion-icon style="color: white;" [name]="p.icono" slot="start"></ion-icon>
+              <ion-label>{{ p.nombre }} x {{p.cantidad}}</ion-label>
+
+              <ion-item>
+                <ion-label>Eliminar</ion-label>
+                <ion-select placeholder="Seleciona la cantidad">
+                  <ion-select-option *ngFor="let item of _constatsService.getCarrito()">Female</ion-select-option>
+                  
+                </ion-select>
+              </ion-item>
+
+              <ion-button fill="clear" (click)="_constatsService.borrarTodo(p)">
+                <ion-icon slot="icon-only" name="close-circle-outline">
+                </ion-icon>
+              </ion-button>
             </ion-item>
           </ion-menu-toggle>
-        </ion-list>
-
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
-
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>

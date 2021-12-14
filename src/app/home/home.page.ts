@@ -9,14 +9,18 @@ import { Carrito, Categoria, ConstantsService, Producto } from '../constants';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(public _constatsService: ConstantsService,private menu: MenuController, private http: HttpClient) {}
+  constructor(
+    public _constatsService: ConstantsService,
+    private menu: MenuController,
+    private http: HttpClient
+  ) {}
   public categorias = Array<Categoria>();
   public productos = Array<Producto>();
   public carrito: Carrito = new Carrito();
   public icono_carrito: boolean = false;
   public folder: string = 'Id';
   private url: string = 'http://localhost:3000/';
-  
+
   public visible: boolean = true;
 
   changeVisible(): void {
@@ -24,7 +28,7 @@ export class HomePage {
   }
 
   changeIcon(): void {
-    this.carrito.productos.length != 0
+    this._constatsService.getCarrito().length != 0
       ? (this.icono_carrito = true)
       : (this.icono_carrito = false);
   }
@@ -52,6 +56,7 @@ export class HomePage {
                     f.precio,
                     f.marca,
                     f.imagen,
+                    f.icono,
                     f.categoria
                   )
                 )

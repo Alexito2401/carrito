@@ -1,7 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button autoHide="false"></ion-menu-button>
+    <ion-buttons slot="secondary">
+      <ion-menu-button autoHide="false">
+        <ion-icon [name]="icono_carrito ? 'cart' : 'cart-outline'"></ion-icon>
+      </ion-menu-button>
     </ion-buttons>
     <ion-title>Tienda Informatica</ion-title>
   </ion-toolbar>
@@ -15,7 +17,6 @@
         <ion-card-header>
           <ion-card-title> {{item.nombre}} </ion-card-title>
         </ion-card-header>
-
         <ion-card-content>
           <ion-label> Precio --> {{item.precio}}€ </ion-label>
           <br />
@@ -27,20 +28,5 @@
         </ion-button>
       </ion-card>
     </div>
-  </div>
-  <div class="c-divlista" *ngIf="!visible">
-    <ion-list class="c-lista">
-      <ion-item class="c-texto" *ngFor="let item of carrito.productos">
-        <ion-label style="margin-right: 10px;">{{item.nombre}} - Cantidad x{{item.cantidad}}</ion-label>
-        <ion-button (click)="_constatsService.borrarUno(item)" (click)="changeIcon()" class="c-trash-button"
-          fill="clear">
-          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
-        </ion-button>
-
-        <ion-button (click)="_constatsService.borrarTodo(item)" (click)="changeIcon()" class="c-trash-button" fill="clear">
-          <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
-        </ion-button>
-      </ion-item>
-    </ion-list>
   </div>
 </ion-content>
